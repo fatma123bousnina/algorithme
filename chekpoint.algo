@@ -1,0 +1,27 @@
+ALGORITHM chekPoint
+VAR
+    s:STRING; // variable pour la phrase 
+    charactere :CHAR;// varaible pour  les caractere de phrase 
+    l:INTEGER :=0;// conteur pour la longueur de phrase
+    v:INTEGER :=0;//conteur pour les voyelles 
+    w:INTEGER :=0;
+
+BEGIN
+
+    Read(s)// pour lire la phrase 
+    WHILE (charactere!= ".") DO//comparer tous les caractere jusqua la point
+    l:=l+1;
+// pour calculer le nombre de voyelle
+        if (charactere="a" OR charactere="e" OR charactere="i" OR charactere="u" OR charactere="o" OR charactere="y")THEN{
+            v:= v+1;
+        }
+        //pour calculer le nombre demots 
+        if(charactere =" ") THEN{
+             w := w+1;}
+    END_WHILE
+    
+    write(l);
+    write (v);
+    write(w);
+
+END
